@@ -1,20 +1,19 @@
 import { createConnection } from 'mysql';
+import seedDB from './seedDB.js';
+const express = require('express');
+const bodyParser = require('body-parser');
+const users = require("./routes/users");
 
-var con = createConnection({
-    host: "35.224.5.246",
-    user: "root",
-    password: "Hackersnoborders2018"
-  });
+const app = express()
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 
-con.connect((err) => {
-    if (err) throw err;
-    console.log("Connected!");
-    // con.query("CREATE DATABASE test", (err, result) => {
-    //   if (err) throw err;
-    //   console.log("Database created");
-    //   console.log(result)
-    // });
+app.get("/", (req, res) => {
+    res.json({dk: 'hiiii'});
 });
 
+app.use('/hwob/users', users);
 
-console.log("Hellllldfafdafdafadllo")
+app.listen(process.env.PORT || 3001, () => {
+    console.log("HWOB Server Running..");
+});
