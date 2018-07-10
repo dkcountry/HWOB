@@ -1,8 +1,24 @@
 import React from "react";
 
 const style = {
-    "paddingLeft": "15px",
-    "paddingRight": "50px",
+    "paddingTop": "10px",
+    "paddingBottom": "10px",
+}
+
+const btnStyle = {
+    "paddingTop": "25px",
+    "paddingBottom": "25px",
+    "backgroundColor": "white",
+    "width": "100%",
+    "textAlign": "left",
+    "boxShadow": "0 0 10px #ccc"
+}
+
+const textStyle = {
+    "paddingLeft": "25px",
+    "paddingRight": "5px",
+    "textAlign": "left",
+    "color": "gray"
 }
 
 class Applicant extends React.Component {
@@ -22,15 +38,37 @@ class Applicant extends React.Component {
         .then(results => {
             return results.json();
         }).then(data => {
+            console.log(data)
+            const d = data[0];
+            this.setState({
+                firstName: d.firstName,
+                lastName: d.lastName,
+                jobTitle: d.jobTitle
+            })
             return
         })
     }
 
+    componentWillMount() {
+        this.appInfo(this.state.appId);
+    }
+
     render() {
         return (
-            <div style={style}>
-                {this.state.appId}
-                {this.appInfo(this.state.appId)}
+            <div className="row" style={style}>
+                <div className="col-sm-10">
+                    <button style={btnStyle} className="btn">
+                        <span style={textStyle}>
+                            {this.state.firstName}
+                        </span>
+                        <span style={{"color": "gray"}}>
+                        {this.state.lastName}
+                        </span>
+                        <div style={textStyle}>
+                        {this.state.jobTitle}
+                        </div>
+                    </button>
+                </div>
             </div>
         )
     }
