@@ -54,9 +54,9 @@ const seedDB = () => {
                         console.log("Table applicants created");
                         var sql = "INSERT INTO applicants (appId, firstName, lastName, jobTitle) VALUES ?";
                         var values = [
-                            ['123','Clement', 'Garnier', 'software engineer II'],
-                            ['92343','Toan', 'Phan', 'software engineer II'],
-                            ['66','Stacy', 'Wu', 'data scientist'],
+                            ['123','Clement', 'Garnier', 'Software Engineer II'],
+                            ['92343','Toan', 'Phan', 'Software Engineer II'],
+                            ['66','Stacy', 'Wu', 'Data Scientist'],
                         ];
                         con.query(sql, [values], function (err, result) {
                             if (err) throw err;
