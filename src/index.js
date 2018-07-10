@@ -1,16 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import NavBar from "./components/nav"
-import "./stylesheets/index.css"
+import NavBar from "./components/nav";
+import UserHome from "./components/userHome";
+import "./stylesheets/index.css";
 
-class Index extends React.Component {
+class App extends React.Component {
     render() {
         return (
             <div>
                 <NavBar />
-                <br/>
                 <div className="container">
-                   <h1> hi pkkkk </h1>
+                   <UserHome />
                 </div>
             </div>
         );
@@ -18,5 +18,5 @@ class Index extends React.Component {
 }
 
 
-ReactDOM.render(<Index />, document.getElementById("index"));
+ReactDOM.render(<App />, document.getElementById("index"));
 
