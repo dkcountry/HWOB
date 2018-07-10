@@ -6,6 +6,12 @@ const htmlWebpackPlugin = new HtmlWebPackPlugin({
 });
 
 module.exports = {
+    devServer: { 
+        inline: true, 
+        contentBase: './dist', 
+        port: 3001, 
+        proxy: { "/**": { target: 'http://localhost:3001', secure: false }  }
+     },
   module: {
     rules: [
       {
