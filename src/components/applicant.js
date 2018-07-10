@@ -12,7 +12,7 @@ class Applicant extends React.Component {
     appInfo(appId) {
         fetch(`/hwob/applicant/${appId}`)
         .then(results => {
-            console.log(results.json())
+            console.log(results)
             return results.json();
             
         }).then(data => {
