@@ -28,12 +28,12 @@ const seedDB = () => {
                 con.connect(function(err) {
                     if (err) throw err;
                     console.log("Connected!");
+
                     var sql = "CREATE TABLE users \
                         (firstName VARCHAR(255), lastName VARCHAR(255), username VARCHAR(255), password VARCHAR(255))";
                     con.query(sql, (err, result) => {
                         if (err) throw err;
                         console.log("Table users created");
-
                         var sql = "INSERT INTO users (firstName, lastName, username, password) VALUES ?";
                         var values = [
                             ['John', 'Smith', 'jsmith', 'pass123'],
@@ -45,7 +45,26 @@ const seedDB = () => {
                             console.log("Number of records inserted: " + result.affectedRows);
                         });
                     });
+
+
+                    var sql = "CREATE TABLE applicants \
+                        (appId INTEGER, firstName VARCHAR(255), lastName VARCHAR(255), jobTitle VARCHAR(255))";
+                    con.query(sql, (err, result) => {
+                        if (err) throw err;
+                        console.log("Table applicants created");
+                        var sql = "INSERT INTO applicants (appId, firstName, lastName, jobTitle) VALUES ?";
+                        var values = [
+                            ['123','Clement', 'Garnier', 'software engineer II'],
+                            ['92343','Toan', 'Phan', 'software engineer II'],
+                            ['66','Stacy', 'Wu', 'data scientist'],
+                        ];
+                        con.query(sql, [values], function (err, result) {
+                            if (err) throw err;
+                            console.log("Number of records inserted: " + result.affectedRows);
+                        });
+                    });
                 });
+
             });
         });
     });
