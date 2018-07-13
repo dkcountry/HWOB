@@ -16,10 +16,10 @@ class NavBar extends React.Component {
         return (
             <nav className="navbar navbar-dark bg-dark">
                 <div className="container">
-                <Link to="/" className="navbar-brand">hacker<strong>migration</strong> </Link>
+                <Link to="/dashboard" className="navbar-brand">hacker<strong>migration</strong> </Link>
                 <div className="navbar-text">
                         <div style={style}><a href="#">Settings</a></div>
-                        <a href="#">Logout </a>
+                        <Link to="/">Logout </Link>
                 </div>
                 </div>
             </nav>

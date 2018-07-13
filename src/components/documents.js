@@ -1,4 +1,5 @@
 import React from "react";
+import NavBar from "./nav";
 
 
 const style = {
@@ -14,7 +15,10 @@ class Documents extends React.Component {
     render() {
         return (
             <div>
-                document page
+                <NavBar />
+                <div className="container">
+                    document page
+                </div>
             </div>
         );
     }

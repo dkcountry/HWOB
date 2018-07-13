@@ -1,5 +1,6 @@
 import React from "react";
 import Applicant from "./applicant";
+import NavBar from "./nav";
 
 
 const style = {
@@ -48,7 +49,9 @@ class DashBoard extends React.Component {
             )}
 
         return (
-            <div style={style}>
+            <div>
+                <NavBar />
+            <div style={style} className="container">
                 <div className="row">
                     <div className="col-sm-6">
                         <h5>Your H1B Petitions </h5>
@@ -60,6 +63,7 @@ class DashBoard extends React.Component {
                     {views}
                     </div>
                 </div>
+            </div>
             </div>
         );
     }
