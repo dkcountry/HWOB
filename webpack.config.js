@@ -10,7 +10,8 @@ module.exports = {
         inline: true, 
         contentBase: './dist', 
         port: 3001, 
-        proxy: { "/**": { target: 'http://localhost:3001', secure: false }  }
+        proxy: { "/**": { target: 'http://localhost:3001', secure: false }  },
+        historyApiFallback: true
      },
   module: {
     rules: [
