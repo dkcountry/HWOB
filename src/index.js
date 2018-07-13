@@ -1,8 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter } from 'react-router-dom';
 import NavBar from "./components/nav";
-import UserHome from "./components/userHome";
+import RouteHandler from "./main";
 import "./stylesheets/index.css";
+import { Link } from 'react-router-dom'
+
 
 class App extends React.Component {
     render() {
@@ -10,13 +13,15 @@ class App extends React.Component {
             <div>
                 <NavBar />
                 <div className="container">
-                   <UserHome />
+                   <RouteHandler />
                 </div>
             </div>
         );
     }
 }
 
-
-ReactDOM.render(<App />, document.getElementById("index"));
-
+ReactDOM.render((
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>
+  ), document.getElementById('index'))
