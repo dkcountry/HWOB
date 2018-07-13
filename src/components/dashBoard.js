@@ -56,7 +56,7 @@ class DashBoard extends React.Component {
                     <div className="col-sm-6">
                         <h5>Your H1B Petitions </h5>
                     </div>
-                    <div className="col-sm-6" style={{"textAlign": "center"}}>
+                    <div className="col-sm-4" style={{"textAlign": "right"}}>
                     <button onClick={this.clickTest} style={btnStyle} type="button" className="btn btn-primary">Start New H1B App</button>
                     </div>
                     <div className="col-sm-12" style={{"paddingTop": "30px", "paddingLeft": "0", "paddingRight": "0"}}>

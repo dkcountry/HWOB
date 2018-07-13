@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 
 const style = {
     "margin": "auto",
-    "textAlign": "center",
     "fontSize": "40px"
 }
 
@@ -13,8 +12,8 @@ const navStyle = {
 }
 
 const formStyle = {
-    "paddingLeft": "500px",
-    "paddingRight": "500px",
+    "paddingLeft": "37%",
+    "paddingRight": "37%",
     "paddingTop": "50px"
 }
 
@@ -42,9 +41,10 @@ class LoginPage extends React.Component {
                     <label htmlFor="exampleInputPassword1">Password</label>
                     <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password"/>
                 </div>
-                <Link to="/dashboard"> <button style={btnStyle} type="submit" className="btn btn-primary">Submit</button> </Link>
+                <Link to="/dashboard"> 
+                    <button style={btnStyle} type="submit" className="btn btn-primary">Submit</button> 
+                </Link>
             </form>
-
         </div>
     )}
 }

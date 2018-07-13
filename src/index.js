@@ -9,15 +9,9 @@ import { Link } from 'react-router-dom'
 class App extends React.Component {
     render() {
         return (
-            <div>
-                <RouteHandler />
-            </div>
+            <RouteHandler />
         );
     }
 }
 
-ReactDOM.render((
-    <BrowserRouter>
-        <App />
-    </BrowserRouter>
-  ), document.getElementById('index'))
+ReactDOM.render((<BrowserRouter><App /></BrowserRouter>), document.getElementById('index'))

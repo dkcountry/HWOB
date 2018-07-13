@@ -3,7 +3,6 @@ import { Switch, Route } from 'react-router-dom'
 import DashBoard from "./components/dashBoard";
 import Documents from "./components/documents";
 import LoginPage from "./components/login";
-import { BrowserRouter as Router} from 'react-router-dom';
 
 
 const RouteHandler = () => (

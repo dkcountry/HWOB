@@ -60,24 +60,22 @@ class Applicant extends React.Component {
             <div className="row" style={style}>
                 <div className="col-sm-10">
                     <Link to="/documents">
-                    <button style={btnStyle} className="btn">
-                        <span style={textStyle}>
-                            {this.state.firstName}
-                        </span>
-                        <span style={{"color": "gray"}}>
-                        {this.state.lastName}
-                        </span>
-                        <div style={textStyle}>
-                        {this.state.jobTitle}
-                        </div>
-                    </button>
+                        <button style={btnStyle} className="btn">
+                            <span style={textStyle}>
+                                {this.state.firstName}
+                            </span>
+                            <span style={{"color": "gray"}}>
+                                {this.state.lastName}
+                            </span>
+                            <div style={textStyle}>
+                                {this.state.jobTitle}
+                            </div>
+                        </button>
                     </Link>
                 </div>
             </div>
         )
     }
-
-
 }
 
 export default Applicant;
