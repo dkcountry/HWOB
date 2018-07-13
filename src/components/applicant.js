@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from 'react-router-dom'
+
 
 const style = {
     "paddingTop": "10px",
@@ -57,6 +59,7 @@ class Applicant extends React.Component {
         return (
             <div className="row" style={style}>
                 <div className="col-sm-10">
+                    <Link to="/documents">
                     <button style={btnStyle} className="btn">
                         <span style={textStyle}>
                             {this.state.firstName}
@@ -68,6 +71,7 @@ class Applicant extends React.Component {
                         {this.state.jobTitle}
                         </div>
                     </button>
+                    </Link>
                 </div>
             </div>
         )

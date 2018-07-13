@@ -7,10 +7,10 @@ const style = {
 }
 
 const btnStyle = {
-    "backgroundColor": "#2e65d3"
+    "backgroundColor": "#445c82"
 }
 
-class UserHome extends React.Component {
+class DashBoard extends React.Component {
     constructor(props) {
         super(props);
         this.clickTest = this.clickTest.bind(this);
@@ -66,4 +66,4 @@ class UserHome extends React.Component {
 }
 
 
-export default UserHome;
+export default DashBoard;
